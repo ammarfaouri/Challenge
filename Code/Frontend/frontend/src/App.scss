@@ -1,0 +1,50 @@
+$background: #f1f6f9;
+$blue-dark: #14274e;
+$table-text-color: #9ba4b4;
+
+html,
+body,
+#root,
+.App {
+  height: 100%;
+}
+
+.App {
+  background-color: $background;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+}
+hr.rounded {
+  border-top: 4px solid #14274e;
+  border-radius: 5px;
+  width: 75%;
+}
+
+.table-latitude {
+  width: 75%;
+  margin: 2rem auto;
+  background-color: $blue-dark;
+  color: $table-text-color;
+  letter-spacing: 1px;
+
+  thead {
+    th {
+      text-transform: uppercase;
+      text-align: center;
+      padding: 10px;
+      background-color: $blue-dark;
+      line-height: 5px;
+    }
+  }
+  tbody {
+    tr {
+      border-bottom: 1px solid #f1f1f1;
+      color: black;
+      background-color: $table-text-color;
+      td {
+        padding: 10px;
+        border: 1px groove;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+version: "3"
+services:
+  react-app:
+    image: react-docker
+    stdin_open: true
+    ports:
+      - "3000:3000"
+    networks:
+      - challenge
+  api-server:
+    image: express-docker
+    ports:
+      - "5000:5000"
+    networks:
+      - challenge
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo:3.6.19-xenial
+    ports:
+      - "27017:27017"
+    networks:
+      - challenge
+    volumes:
+      - mongo-data:/data/db
+networks:
+  challenge:
+    driver: bridge
+volumes:
+  mongo-data:
+    driver: local
